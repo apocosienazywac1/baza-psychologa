@@ -8,29 +8,37 @@
 </head>
 <body>
 
-  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" class="ivy left">
-  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" class="ivy right">
+  <!-- Bluszcz po bokach -->
+  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz lewy" class="ivy left">
+  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz prawy" class="ivy right">
 
+  <!-- Nagłówek -->
   <h1 class="header-box">Baza wiedzy: Ustawa o zawodzie psychologa</h1>
 
+  <!-- Grafika książki -->
   <div class="center-image-container">
-    <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" class="center-image">
+    <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole" class="center-image">
   </div>
 
-  <!-- TU MA BYĆ BOT -->
+  <!-- Kontener na chatbota -->
   <div id="bot-container"></div>
 
-  <!-- TYLKO TEN SCRIPT -->
+  <!-- Botpress Webchat (embed) -->
   <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
 
   <script>
     window.addEventListener('load', function () {
-      window.botpressWebChat.init({
-        host: 'https://cdn.botpress.cloud/webchat/v3.6',
-        botId: 'IFCO3FKO',
-        container: '#bot-container',
-        showConversationsButton: false
-      });
+      if (window.botpressWebChat) {
+        window.botpressWebChat.init({
+          host: 'https://cdn.botpress.cloud/webchat/v3.6',
+          botId: 'IFCO3FKO',            // Twój Bot ID
+          container: '#bot-container',  // ID ramki w HTML
+          botName: 'Specjalistka Agnieszka',
+          showConversationsButton: false, // brak pływającego dymka
+          enableReset: true,             // reset przy odświeżeniu
+          enableWelcomeMessage: true
+        });
+      }
     });
   </script>
 
