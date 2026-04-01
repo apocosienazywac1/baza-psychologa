@@ -1,46 +1,18 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baza wiedzy: Ustawa o zawodzie psychologa</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<div id="bot-container"></div>
 
-  <!-- Bluszcz po bokach -->
-  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz lewy" class="ivy left">
-  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz prawy" class="ivy right">
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
 
-  <!-- Nagłówek -->
-  <h1 class="header-box">Baza wiedzy: Ustawa o zawodzie psychologa</h1>
-
-  <!-- Grafika książki -->
-  <div class="center-image-container">
-    <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole" class="center-image">
-  </div>
-
-  <!-- Kontener na chatbota -->
-  <div id="bot-container"></div>
-
-  <!-- Botpress Webchat (embed) -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-
-  <script>
-    window.addEventListener('load', function () {
-      if (window.botpressWebChat) {
-        window.botpressWebChat.init({
-          host: 'https://cdn.botpress.cloud/webchat/v3.6',
-          botId: 'IFCO3FKO',            // Twój Bot ID
-          container: '#bot-container',  // ID ramki w HTML
-          botName: 'Specjalistka Agnieszka',
-          showConversationsButton: false, // brak pływającego dymka
-          enableReset: true,             // reset przy odświeżeniu
-          enableWelcomeMessage: true
-        });
-      }
-    });
-  </script>
-
-</body>
-</html>
+<script>
+  window.addEventListener('load', function() {
+    if (window.botpressWebChat) {
+      window.botpressWebChat.init({
+        container: '#bot-container',  // ramka
+        botName: 'Specjalistka Agnieszka',
+        webchatConfig: 'https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json', 
+        showConversationsButton: false, // brak dymka
+        enableReset: true,
+        enableWelcomeMessage: true
+      });
+    }
+  });
+</script>
