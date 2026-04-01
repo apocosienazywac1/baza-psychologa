@@ -1,61 +1,62 @@
-/* --- Tło strony --- */
+/* Ogólne tło strony */
 body {
   background-color: #b8e0d2; /* pastelowa zieleń */
-  font-family: 'Georgia', serif;
+  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 50px 0;
-  text-align: center; /* wyśrodkowanie nagłówka i chatbota */
+  padding: 0;
+  text-align: center;
   position: relative;
-  min-height: 100vh;
 }
 
-/* --- Nagłówek w ramce dopasowanej do napisu --- */
-h1 {
+/* Nagłówek w ramce */
+.header-box {
   display: inline-block;
   font-size: 2em;
   color: #1b3d2d;
   padding: 15px 30px;
-  border: 2px solid #d0f0c0; /* jasna zieleń */
+  border: 2px solid #d0f0c0;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   background-color: rgba(255,255,255,0.7);
-  margin: 0 0 40px 0;
+  margin: 20px auto 40px auto;
 }
 
-/* --- Centralna grafika książki --- */
-#center-image {
-  max-width: 500px;
-  width: 80%;
-  height: auto;
-  display: block;
+/* Grafika książki w centrum */
+.center-image-container {
   margin: 0 auto 50px auto;
+}
+
+.center-image {
+  width: 300px;
+  max-width: 90%;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* --- Kontener osadzonego bota --- */
+/* Kontener na chatbota */
 #bot-container {
-  width: 400px; /* szerokość okna bota */
+  width: 400px;
   max-width: 90%;
-  margin: 0 auto 50px auto; /* wyśrodkowanie */
-  border-radius: 15px; /* zaokrąglone rogi */
-  overflow: hidden; /* żeby chat nie wychodził poza ramkę */
+  margin: 0 auto 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  min-height: 500px;
 }
 
-/* --- Boczne bluszcze --- */
-body::before,
-body::after {
-  content: "";
+/* Bluszcz po bokach */
+.ivy {
   position: fixed;
-  top: 0;
-  width: 120px;
-  height: 100%;
-  background-image: url('Gemini_Generated_Image_kk4v00kk4v00kk4v.png');
-  background-repeat: repeat-y;
-  background-size: contain;
-  opacity: 0.2;
-  z-index: 0;
+  top: 100px;
+  width: 80px;
+  max-width: 10%;
+  opacity: 0.8;
 }
-body::before { left: 0; }
-body::after { right: 0; }
+
+.ivy.left {
+  left: 0;
+}
+
+.ivy.right {
+  right: 0;
+}
