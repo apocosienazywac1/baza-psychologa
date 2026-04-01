@@ -34,17 +34,6 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    #bot-container { 
-      width: 400px; 
-      max-width: 90%; 
-      height: 600px; 
-      margin: 0 auto 50px; 
-      border-radius: 15px; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-      border: none; 
-      overflow: hidden;
-    }
-
     /* Bluszcz po bokach */
     .ivy {
       position: fixed;
@@ -55,6 +44,14 @@
     }
     .ivy.left { left: 0; }
     .ivy.right { right: 0; }
+
+    /* Kontener na iframe */
+    #bot-container {
+      width: 400px;
+      max-width: 90%;
+      height: 600px;
+      margin: 0 auto 50px;
+    }
   </style>
 </head>
 <body>
@@ -71,10 +68,23 @@
     <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole" class="center-image">
   </div>
 
-  <!-- Bot w ramce -->
-  <iframe id="bot-container" 
-          src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json">
-  </iframe>
+  <!-- Kontener na bota -->
+  <div id="bot-container"></div>
+
+  <!-- Skrypt do wczytania iframe z nową sesją przy każdym odświeżeniu -->
+  <script>
+    const container = document.getElementById('bot-container');
+    const iframe = document.createElement('iframe');
+    iframe.id = 'bot-container-iframe';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = 'none';
+    iframe.style.borderRadius = '15px';
+    iframe.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+    const randomSession = 'session-' + Date.now(); // nowa sesja
+    iframe.src = 'https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json&sessionId=' + randomSession;
+    container.appendChild(iframe);
+  </script>
 
 </body>
 </html>
