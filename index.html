@@ -23,27 +23,27 @@
   <!-- Kontener bota -->
   <div id="bot-container"></div>
 
-  <!-- Botpress -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <!-- BOTPRESS (STABILNA WERSJA) -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
 
   <script>
     window.addEventListener('load', function () {
-      console.log("Ładowanie Botpress...");
+      console.log("Start ładowania Botpress...");
 
       if (window.botpressWebChat) {
         window.botpressWebChat.init({
-          host: 'https://cdn.botpress.cloud/webchat/v3.6',
           botId: 'IFCO3FKO',
+          clientId: 'IFCO3FKO',
+          hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
+          messagingUrl: 'https://messaging.botpress.cloud',
           container: '#bot-container',
           botName: 'Specjalistka Agnieszka',
-          showConversationsButton: false,
-          enableReset: true,
-          enableWelcomeMessage: true
+          showConversationsButton: false
         });
 
-        console.log("Botpress zainicjalizowany");
+        console.log("Botpress uruchomiony");
       } else {
-        console.error("Botpress się nie załadował!");
+        console.error("Botpress się NIE załadował");
       }
     });
   </script>
