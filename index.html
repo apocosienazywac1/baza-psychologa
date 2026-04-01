@@ -8,43 +8,29 @@
 </head>
 <body>
 
-  <!-- Bluszcz po bokach -->
-  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz lewy" class="ivy left">
-  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz prawy" class="ivy right">
+  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" class="ivy left">
+  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" class="ivy right">
 
-  <!-- Nagłówek -->
   <h1 class="header-box">Baza wiedzy: Ustawa o zawodzie psychologa</h1>
 
-  <!-- Grafika -->
   <div class="center-image-container">
-    <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole" class="center-image">
+    <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" class="center-image">
   </div>
 
-  <!-- Kontener bota -->
+  <!-- TU MA BYĆ BOT -->
   <div id="bot-container"></div>
 
-  <!-- BOTPRESS (STABILNA WERSJA) -->
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <!-- TYLKO TEN SCRIPT -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
 
   <script>
     window.addEventListener('load', function () {
-      console.log("Start ładowania Botpress...");
-
-      if (window.botpressWebChat) {
-        window.botpressWebChat.init({
-          botId: 'IFCO3FKO',
-          clientId: 'IFCO3FKO',
-          hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
-          messagingUrl: 'https://messaging.botpress.cloud',
-          container: '#bot-container',
-          botName: 'Specjalistka Agnieszka',
-          showConversationsButton: false
-        });
-
-        console.log("Botpress uruchomiony");
-      } else {
-        console.error("Botpress się NIE załadował");
-      }
+      window.botpressWebChat.init({
+        host: 'https://cdn.botpress.cloud/webchat/v3.6',
+        botId: 'IFCO3FKO',
+        container: '#bot-container',
+        showConversationsButton: false
+      });
     });
   </script>
 
