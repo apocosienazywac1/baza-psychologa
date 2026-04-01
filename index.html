@@ -20,24 +20,30 @@
     <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole" class="center-image">
   </div>
 
-  <!-- BOT -->
+  <!-- Kontener bota -->
   <div id="bot-container"></div>
 
   <!-- Botpress -->
   <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+
   <script>
     window.addEventListener('load', function () {
+      console.log("Ładowanie Botpress...");
+
       if (window.botpressWebChat) {
         window.botpressWebChat.init({
           host: 'https://cdn.botpress.cloud/webchat/v3.6',
           botId: 'IFCO3FKO',
           container: '#bot-container',
-          webchatConfig: 'https://files.bpcontent.cloud/2026/04/01/09/20260401090115-IFCO3FKO.js',
           botName: 'Specjalistka Agnieszka',
           showConversationsButton: false,
           enableReset: true,
           enableWelcomeMessage: true
         });
+
+        console.log("Botpress zainicjalizowany");
+      } else {
+        console.error("Botpress się nie załadował!");
       }
     });
   </script>
