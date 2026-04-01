@@ -5,10 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baza wiedzy: Ustawa o zawodzie psychologa</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- Tło strony --- */
+    body {
+      background-color: #b8e0d2; /* pastelowo zielone */
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 50px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* --- Ramka nagłówka --- */
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      color: #1b3d2d;
+      padding: 20px 40px;
+      border: 2px solid #d0f0c0; /* jasna zieleń */
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: rgba(255,255,255,0.6); /* lekko przezroczysta */
+      z-index: 1;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    /* --- Kontener bota --- */
+    #bot-container {
+      width: 500px;
+      height: 600px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      z-index: 1;
+      position: relative;
+    }
+
+    /* --- Boczne motywy bluszczu --- */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      width: 120px;
+      height: 100%;
+      background-image: url('Gemini_Generated_Image_kk4v00kk4v00kk4v.png'); /* Twój obrazek bluszczu */
+      background-repeat: repeat-y;
+      background-size: contain;
+      opacity: 0.2; /* delikatny motyw */
+      z-index: 0;
+    }
+    body::before { left: 0; }
+    body::after { right: 0; }
+  </style>
 </head>
 <body>
   <h1>Baza wiedzy: Ustawa o zawodzie psychologa</h1>
+
+  <!-- Kontener dla bota -->
   <div id="bot-container"></div>
-  <script src="script.js"></script>
+
+  <!-- Botpress scripts -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/04/01/09/20260401090115-IFCO3FKO.js" defer></script>
+
 </body>
 </html>
