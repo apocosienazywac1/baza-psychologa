@@ -5,39 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baza wiedzy: Ustawa o zawodzie psychologa</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; background: #b8e0d2; margin: 0; padding: 0; }
-    h1 { font-size: 2em; margin: 20px 0; color: #1b3d2d; }
-    .center-image { width: 300px; max-width: 90%; margin-bottom: 30px; }
-    #bot-container { width: 400px; max-width: 90%; height: 500px; margin: 0 auto 50px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); overflow: hidden; }
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      background: #b8e0d2; 
+      margin: 0; 
+      padding: 0; 
+      position: relative;
+    }
+
+    h1 { 
+      font-size: 2em; 
+      margin: 20px 0; 
+      color: #1b3d2d; 
+      padding: 15px 30px;
+      border: 2px solid #d0f0c0;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: rgba(255,255,255,0.7);
+      display: inline-block;
+    }
+
+    .center-image { 
+      width: 300px; 
+      max-width: 90%; 
+      margin-bottom: 30px; 
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    #bot-container { 
+      width: 400px; 
+      max-width: 90%; 
+      height: 600px; 
+      margin: 0 auto 50px; 
+      border-radius: 15px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+      border: none; 
+      overflow: hidden;
+    }
+
+    /* Bluszcz po bokach */
+    .ivy {
+      position: fixed;
+      top: 100px;
+      width: 80px;
+      max-width: 10%;
+      opacity: 0.8;
+    }
+    .ivy.left { left: 0; }
+    .ivy.right { right: 0; }
   </style>
 </head>
 <body>
 
+  <!-- Bluszcz po bokach -->
+  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz lewy" class="ivy left">
+  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz prawy" class="ivy right">
+
+  <!-- Nagłówek -->
   <h1>Baza wiedzy: Ustawa o zawodzie psychologa</h1>
 
-  <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka" class="center-image">
+  <!-- Grafika książki -->
+  <div class="center-image-container">
+    <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole" class="center-image">
+  </div>
 
-  <div id="bot-container"></div>
-
-  <!-- Botpress Webchat -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-
-  <script>
-    window.addEventListener('load', function() {
-      if (window.botpressWebChat) {
-        window.botpressWebChat.init({
-          container: '#bot-container',
-          botName: 'Specjalistka Agnieszka',
-          webchatConfig: 'https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json',
-          showConversationsButton: false,
-          enableReset: true,
-          enableWelcomeMessage: true
-        });
-      } else {
-        console.error("Botpress WebChat nie załadował się!");
-      }
-    });
-  </script>
+  <!-- Bot w ramce -->
+  <iframe id="bot-container" 
+          src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json">
+  </iframe>
 
 </body>
 </html>
