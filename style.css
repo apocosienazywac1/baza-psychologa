@@ -45,11 +45,12 @@ h1 {
 
 /* Bluszcz po bokach na całą wysokość strony */
 .ivy {
-  position: absolute;   /* wypełnia całą stronę */
+  position: fixed;       /* zostaje przy boku przy przewijaniu */
   top: 0;
-  width: 80px;
-  height: 100%;
-  object-fit: cover;
+  bottom: 0;
+  width: 80px;           /* szerokość bluszczu */
+  height: 100vh;         /* wysokość = wysokość okna przeglądarki */
+  object-fit: cover;     /* wypełnia cały kontener */
   opacity: 0.8;
   z-index: -1;
 }
