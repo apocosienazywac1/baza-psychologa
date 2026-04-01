@@ -1,11 +1,15 @@
-// Inicjalizacja Webchat Botpress w kontenerze
+// Inicjalizacja pływającego dymka Botpress
 window.botpressWebChat.init({
   host: 'https://cdn.botpress.cloud/webchat/v3.6',
-  botId: 'IFCO3FKO', // Twój botId
-  webchatConfig: 'https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json', // Twój link do JSON
+  botId: 'IFCO3FKO',
+  webchatConfig: 'https://files.bpcontent.cloud/2026/04/01/09/20260401090115-IFCO3FKO.js',
   botName: 'Specjalistka Agnieszka',
-  showConversationsButton: false, // usuwa ikonę w prawym dolnym rogu
+  showConversationsButton: true, // pływający dymek
+  botConversationsButtonStyle: {
+    backgroundColor: '#ff6b6b', // pastelowa czerwień
+    bottom: '20px',
+    right: '20px'
+  },
   enableReset: true,
-  enableWelcomeMessage: true,
-  container: document.getElementById('bot-container') // wstawienie bota do kontenera na stronie
+  enableWelcomeMessage: true
 });
