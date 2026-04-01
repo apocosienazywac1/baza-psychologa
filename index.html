@@ -1,18 +1,45 @@
-<div id="bot-container"></div>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baza wiedzy: Ustawa o zawodzie psychologa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <!-- Bluszcz po bokach -->
+  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz lewy" class="ivy left">
+  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz prawy" class="ivy right">
 
-<script>
-  window.addEventListener('load', function() {
-    if (window.botpressWebChat) {
-      window.botpressWebChat.init({
-        container: '#bot-container',  // ramka
-        botName: 'Specjalistka Agnieszka',
-        webchatConfig: 'https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json', 
-        showConversationsButton: false, // brak dymka
-        enableReset: true,
-        enableWelcomeMessage: true
-      });
-    }
-  });
-</script>
+  <!-- Nagłówek -->
+  <h1 class="header-box">Baza wiedzy: Ustawa o zawodzie psychologa</h1>
+
+  <!-- Grafika książki -->
+  <div class="center-image-container">
+    <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole" class="center-image">
+  </div>
+
+  <!-- Kontener na chatbota -->
+  <div id="bot-container" style="width: 400px; max-width: 90%; margin: 0 auto 50px auto; min-height: 500px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2);"></div>
+
+  <!-- Botpress Webchat (embed za pomocą działającego JSON config) -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+
+  <script>
+    window.addEventListener('load', function() {
+      if (window.botpressWebChat) {
+        window.botpressWebChat.init({
+          container: '#bot-container',
+          botName: 'Specjalistka Agnieszka',
+          webchatConfig: 'https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json',
+          showConversationsButton: false,
+          enableReset: true,
+          enableWelcomeMessage: true
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
