@@ -43,14 +43,13 @@ h1 {
   margin: 0 auto 50px auto;
 }
 
-/* Bluszcz po bokach na całą wysokość strony */
+/* Bluszcz po bokach na całą długość strony */
 .ivy {
-  position: fixed;       /* zostaje przy boku przy przewijaniu */
+  position: absolute;      /* wypełnia całą stronę */
   top: 0;
-  bottom: 0;
-  width: 80px;           /* szerokość bluszczu */
-  height: 100vh;         /* wysokość = wysokość okna przeglądarki */
-  object-fit: cover;     /* wypełnia cały kontener */
+  width: 160px;            /* podwojona szerokość */
+  height: 100%;            /* wypełnia całą stronę */
+  object-fit: cover;       /* obrazek wypełnia kontener */
   opacity: 0.8;
   z-index: -1;
 }
