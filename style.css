@@ -1,7 +1,7 @@
-/* Kolor tła strony */
+/* Tło strony i czcionki */
 body {
-  background-color: #b8e0d2; /* pastelowo zielony */
-  font-family: 'Arial', sans-serif;
+  background-color: #b8e0d2; /* pastelowo zielone tło */
+  font-family: 'Georgia', serif; /* ładniejsza czcionka dla napisu */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,18 +13,17 @@ body {
 
 /* Napis główny */
 h1 {
-  font-family: 'Georgia', serif; /* ładniejsza czcionka */
   font-size: 2em;
   text-align: center;
   margin-bottom: 40px;
-  color: #1b3d2d; /* ciemniejszy zielony kontrastujący z tłem */
+  color: #1b3d2d; /* ciemniejszy zielony */
 }
 
 /* Kontener bota */
-#bot-container iframe {
-  border-radius: 15px; /* zaokrąglone rogi */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* delikatny cień */
+#bot-container {
   width: 400px;
   height: 500px;
-  border: none;
+  border-radius: 15px; /* zaokrąglone rogi */
+  overflow: hidden; /* iframe dziedziczy zaokrąglenie */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
