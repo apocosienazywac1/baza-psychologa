@@ -13,8 +13,22 @@
   <!-- Centralna grafika książki -->
   <img id="center-image" src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole">
 
-  <!-- Botpress pływający dymek -->
+  <!-- Kontener na osadzonego chatbota -->
+  <div id="bot-container"></div>
+
+  <!-- Botpress osadzony -->
   <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2026/04/01/09/20260401090115-IFCO3FKO.js" defer></script>
+  <script>
+    window.botpressWebChat.init({
+      host: 'https://cdn.botpress.cloud/webchat/v3.6',
+      botId: 'IFCO3FKO', // Twój Bot ID
+      container: '#bot-container', // wstawienie chatbota w tym divie
+      webchatConfig: 'https://files.bpcontent.cloud/2026/04/01/09/20260401090115-IFCO3FKO.js',
+      botName: 'Specjalistka Agnieszka',
+      showConversationsButton: false, // wyłącza pływający dymek
+      enableReset: true,               // reset konwersacji przy ładowaniu strony
+      enableWelcomeMessage: true
+    });
+  </script>
 </body>
 </html>
