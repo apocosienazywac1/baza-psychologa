@@ -4,26 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baza wiedzy: Ustawa o zawodzie psychologa</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #b8e0d2; margin: 0; padding: 0; }
+    h1 { font-size: 2em; margin: 20px 0; color: #1b3d2d; }
+    .center-image { width: 300px; max-width: 90%; margin-bottom: 30px; }
+    #bot-container { width: 400px; max-width: 90%; height: 500px; margin: 0 auto 50px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); overflow: hidden; }
+  </style>
 </head>
 <body>
 
-  <!-- Bluszcz po bokach -->
-  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz lewy" class="ivy left">
-  <img src="Gemini_Generated_Image_kk4v00kk4v00kk4v.png" alt="Bluszcz prawy" class="ivy right">
+  <h1>Baza wiedzy: Ustawa o zawodzie psychologa</h1>
 
-  <!-- Nagłówek -->
-  <h1 class="header-box">Baza wiedzy: Ustawa o zawodzie psychologa</h1>
+  <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka" class="center-image">
 
-  <!-- Grafika książki -->
-  <div class="center-image-container">
-    <img src="Gemini_Generated_Image_4ute9x4ute9x4ute.png" alt="Książka na stole" class="center-image">
-  </div>
+  <div id="bot-container"></div>
 
-  <!-- Kontener na chatbota -->
-  <div id="bot-container" style="width: 400px; max-width: 90%; margin: 0 auto 50px auto; min-height: 500px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2);"></div>
-
-  <!-- Botpress Webchat (embed za pomocą działającego JSON config) -->
+  <!-- Botpress Webchat -->
   <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
 
   <script>
@@ -37,6 +33,8 @@
           enableReset: true,
           enableWelcomeMessage: true
         });
+      } else {
+        console.error("Botpress WebChat nie załadował się!");
       }
     });
   </script>
