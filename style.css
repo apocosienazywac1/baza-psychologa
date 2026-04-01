@@ -1,22 +1,30 @@
+/* Kolor tła strony */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    margin: 0;
-    padding: 50px;
-    background-color: #f5f5f5;
-    text-align: center;
+  background-color: #b8e0d2; /* pastelowo zielony */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 50px;
 }
 
+/* Napis główny */
 h1 {
-    margin-bottom: 50px;
-    color: #333;
+  font-family: 'Georgia', serif; /* ładniejsza czcionka */
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1b3d2d; /* ciemniejszy zielony kontrastujący z tłem */
 }
 
-#bot-container {
-    width: 400px;
-    height: 500px;
+/* Kontener bota */
+#bot-container iframe {
+  border-radius: 15px; /* zaokrąglone rogi */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* delikatny cień */
+  width: 400px;
+  height: 500px;
+  border: none;
 }
