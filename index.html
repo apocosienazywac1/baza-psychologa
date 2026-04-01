@@ -4,55 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baza wiedzy: Ustawa o zawodzie psychologa</title>
-  <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      text-align: center; 
-      background: #b8e0d2; 
-      margin: 0; 
-      padding: 0; 
-      position: relative;
-    }
-
-    h1 { 
-      font-size: 2em; 
-      margin: 20px 0; 
-      color: #1b3d2d; 
-      padding: 15px 30px;
-      border: 2px solid #d0f0c0;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      background-color: rgba(255,255,255,0.7);
-      display: inline-block;
-    }
-
-    .center-image { 
-      width: 300px; 
-      max-width: 90%; 
-      margin-bottom: 30px; 
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    /* Bluszcz po bokach */
-    .ivy {
-      position: fixed;
-      top: 100px;
-      width: 80px;
-      max-width: 10%;
-      opacity: 0.8;
-    }
-    .ivy.left { left: 0; }
-    .ivy.right { right: 0; }
-
-    /* Kontener na iframe */
-    #bot-container {
-      width: 400px;
-      max-width: 90%;
-      height: 600px;
-      margin: 0 auto 50px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -71,19 +23,25 @@
   <!-- Kontener na bota -->
   <div id="bot-container"></div>
 
-  <!-- Skrypt do wczytania iframe z nową sesją przy każdym odświeżeniu -->
+  <!-- Skrypt do dynamicznego iframe z resetem sesji -->
   <script>
-    const container = document.getElementById('bot-container');
-    const iframe = document.createElement('iframe');
-    iframe.id = 'bot-container-iframe';
-    iframe.style.width = '100%';
-    iframe.style.height = '100%';
-    iframe.style.border = 'none';
-    iframe.style.borderRadius = '15px';
-    iframe.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
-    const randomSession = 'session-' + Date.now(); // nowa sesja
-    iframe.src = 'https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json&sessionId=' + randomSession;
-    container.appendChild(iframe);
+    window.addEventListener('load', () => {
+      const container = document.getElementById('bot-container');
+      container.innerHTML = ''; // usuwa poprzedni iframe (jeśli jest)
+
+      const iframe = document.createElement('iframe');
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.border = 'none';
+      iframe.style.borderRadius = '15px';
+      iframe.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+
+      // Tworzymy nową sesję przy każdym ładowaniu
+      const sessionId = 'session-' + Date.now();
+      iframe.src = 'https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/04/01/09/20260401090115-3JZ17WG4.json&sessionId=' + sessionId;
+
+      container.appendChild(iframe);
+    });
   </script>
 
 </body>
