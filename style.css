@@ -1,6 +1,5 @@
-/* Ogólne tło strony */
 body {
-  background-color: #b8e0d2; /* pastelowa zieleń */
+  background-color: #b8e0d2;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -8,7 +7,7 @@ body {
   position: relative;
 }
 
-/* Nagłówek w ramce */
+/* Nagłówek */
 .header-box {
   display: inline-block;
   font-size: 2em;
@@ -21,9 +20,9 @@ body {
   margin: 20px auto 40px auto;
 }
 
-/* Grafika książki w centrum */
+/* Obraz */
 .center-image-container {
-  margin: 0 auto 50px auto;
+  margin-bottom: 40px;
 }
 
 .center-image {
@@ -33,24 +32,26 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* Kontener na chatbota */
+/* BOT */
 #bot-container {
-  width: 400px;
-  max-width: 90%;
-  margin: 0 auto 50px auto;
+  width: 420px;
+  max-width: 95%;
+  margin: 0 auto 60px auto;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  min-height: 500px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  min-height: 550px;
+  background: white;
 }
 
-/* Bluszcz po bokach */
+/* Bluszcz */
 .ivy {
   position: fixed;
   top: 100px;
   width: 80px;
   max-width: 10%;
   opacity: 0.8;
+  pointer-events: none;
 }
 
 .ivy.left {
